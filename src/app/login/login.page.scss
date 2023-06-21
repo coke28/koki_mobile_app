@@ -1,0 +1,219 @@
+
+  .bottomDiv {
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .fodderDiv {
+    margin-bottom: 100px;
+  }
+  .bottomBtn {
+    color: #737373;
+    background-color: #fff;
+    text-transform: none;
+    border: 1px solid #999999;
+    box-shadow: none;
+  }
+  .bottomBtn-noborder {
+    color: #737373;
+    background-color: #fff;
+    text-transform: none;
+    border: none;
+    box-shadow: none;
+  }
+  .countrySelInput {
+    max-width: 100%;
+    width: 100%;
+  }
+  .flagImage {
+    width: 1.4rem !important;
+  }
+  .prefixBtn {
+    color: #333333;
+    margin-right: 0 !important;
+    font-size: 1.4rem !important;
+    white-space: pre;
+  }
+  .exLabel {
+    color: #4d4d4d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .formItem {
+    border: 1px solid #bfd2d9 !important;
+    border-radius: 10px !important;
+  }
+  .no-shadow {
+    box-shadow: 0;
+  }
+  .no-padding {
+    padding: 0;
+  }
+  // .login-head {
+
+  // }
+  .topmostBtn {
+    padding-top: 5%;
+    padding-left: 1%;
+  }
+  .backbtnbkg {
+    background-color: #fff;
+  }
+  .center-image {
+    text-align: center;
+  }
+  .login-header-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  .login-title {
+    font-weight: 600;
+    font-size: 2.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #3c405d;
+  }
+  .login-subtitle {
+    color: #282a3e;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .title-column {
+    vertical-align: bottom;
+    padding-left: 5%;
+  }
+  // .toBottom {
+
+  // }
+  .loginBtn {
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    font-size: 120%;
+    font-weight: 600;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10%;
+    border-radius: 10px !important;
+  }
+  .formCss {
+    padding: 5%;
+  }
+  .isError {
+    color: #f53d3d !important;
+    word-wrap: normal;
+    white-space: nowrap;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  .login-or {
+    color: #bdbdbd;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .logOr p::before,
+  .logOr p::after {
+    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration: line-through;
+    box-sizing: border-box;
+  }
+  .btnFacebook {
+    color: #fff;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: none;
+    height: 45px;
+    background-color: #3b5998;
+  }
+  .btnGoogle {
+    color: #fff;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: none;
+    height: 45px;
+    background-color: #ea4335;
+  }
+  .signUp {
+    color: #005091;
+  }
+  
+  .reg-text {
+    text-align: center;
+    color: red importa;
+    margin-top: 6%;
+    font-size: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .adjust-top {
+    padding-top: 5%;
+  }
+  .forgot-text {
+    margin-top: 0;
+    text-align: center;
+    color: #646464;
+    margin-top: 6%;
+    font-size: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  * {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  ion-input.custom {
+    --background: rgb(250,250,250);
+    --color: rgb(27, 26, 26);
+    --placeholder-color: rgb(133,133,137);
+    --placeholder-opacity: .9;
+
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --padding-top: 10px;
+    margin-top: 20px;
+
+    border-radius: 5px;
+}
+
+.mobilePrefix {
+  padding: 5px 0 5px 8px;
+  color: rgb(80, 80, 82);
+}
+
+.tooglePassword{
+  color: rgb(80, 80, 82);
+  margin-left: -30px; 
+  position:relative; 
+  top:37px;
+  z-index: 10;
+  cursor: pointer;
+  
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 10;
+  width: 100%;
+
+  color: white;
+  text-align: center;
+}
+
+a{
+
+  text-decoration: none;
+}
+

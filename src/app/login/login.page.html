@@ -1,0 +1,151 @@
+<ion-content>
+  <ion-grid class="no-padding">
+    <ion-row class="login-head topmostBtn">
+      <ion-col col-12>
+        <!-- <button navPop icon-only class="backbtnbkg">
+          <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        </button> -->
+      </ion-col>
+    </ion-row>
+    <ion-row class="login-head">
+      <ion-col col-12 align="center">
+        <img class="login-header-img" src="assets/img/terra_huevos.jpg" />
+      </ion-col>
+    </ion-row>
+    <ion-row class="login-head">
+      <ion-col class="title-column">
+        <div class="toBottom">
+          <span class="login-title">Welcome Back.</span>
+          <br />
+          <span class="login-subtitle">Login to your account</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <form #userForm="ngForm" class="formCss" (submit)="login()" >
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label position="stacked">Username</ion-label>
+        <!-- <ion-input
+          [clearInput]="true"
+          #nameMobileNumber="ngModel"
+          name="mobileNumber"
+          placeholder="ex...091790189928"
+          type="tel"
+          [maxlength]="10"
+          [(ngModel)]="loginCredential.mobileNumber"
+          required
+        ></ion-input> -->
+
+        <ion-input
+          name="username"
+          #nameUsername="ngModel"
+          [(ngModel)]="loginCredential.username"
+          type="text"
+          class="custom ion-padding"
+          placeholder="Enter Username"
+          required
+        >
+          <!-- <span class="mobilePrefix">+63 &nbsp;</span> -->
+        </ion-input>
+        <div *ngIf="nameUsername.invalid && nameUsername.touched">
+          <small class="isError" *ngIf="nameUsername.errors"
+            >Username is required</small
+          >
+        </div>
+      </ion-item>
+
+     
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input
+          class="custom ion-padding"
+          #namePassword="ngModel"
+          name="password"
+          placeholder="Enter Password"
+          [type]="showPassword ? 'text' : 'password'"
+          [(ngModel)]="loginCredential.password"
+          required
+        ></ion-input>
+        <ion-icon
+          slot="end"
+          class="tooglePassword"
+          [name]="passwordToggleIcon"
+          (click)="togglePassword()"
+        ></ion-icon>
+        <div *ngIf="namePassword.invalid && namePassword.touched">
+          <small class="isError" *ngIf="namePassword.errors"
+            >Password is required</small
+          >
+        </div>
+      </ion-item>
+   
+      <ion-row>
+        <ion-col>
+          <ion-button
+            [disabled]="userForm.form.invalid"
+            type="submit"
+            class="loginBtn"
+            expand="block"
+            >Sign In</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </form>
+
+  
+  <!-- <ion-grid class="footer">
+    <ion-row>
+      <ion-col col-6>
+        <p class="forgot-text">
+          <a style="color:black">Forgot Password</a>
+        </p>
+       
+      </ion-col>
+      <ion-col col-6>
+     
+
+      <p class="reg-text">
+         <a class="signUp" routerLink="/registration">Sign Up</a>
+      </p>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="no-padding">
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+
+
+  <!-- <ion-grid class="no-padding">
+    <ion-row>
+      <ion-col col-12 class="logOr">
+        <p class="login-or mt-2">OR</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <p class="reg-text">
+          New Here? <a class="reg-anchor" routerLink="/registration">Create an Account</a>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="no-padding">
+        <p class="forgot-text">
+          <a class="reg-anchor" tappable>Forgot Password</a>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="no-padding">
+        <p class="forgot-text"><a class="reg-anchor">v.ICookie.1</a></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>

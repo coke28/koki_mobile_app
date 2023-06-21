@@ -1,0 +1,102 @@
+<ion-header class="ion-no-border" collapse="fade">
+  <ion-toolbar>
+    <ion-button fill="clear" (click)="goBack()" color="medium">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-padding">
+    <h1>Enter Batch Details</h1>
+    <h6 class="subtext">Let's start processing the batch!</h6>
+  </div>
+  <!--Form:: Verify Mobile Number -->
+
+  <div class="ion-padding">
+    <h1>Fill in all required fields</h1>
+  </div>
+  <!--Form:: User/Account Information -->
+  <form #batchForm="ngForm" class="formCss" (submit)="addBatch()">
+    <ion-list>
+      <!-- begin:: Name -->
+      <ion-item lines="none">
+        <ion-label position="stacked">Building</ion-label>
+        <ion-select
+          name="building"
+          #nameBuilding="ngModel"
+          [(ngModel)]="building"
+          class="custom ion-padding"
+          interface="popover"
+          placeholder="Select Building"
+          required
+        >
+          <ion-select-option
+            *ngFor="let buildingZ of buildings"
+            value="{{ buildingZ.id }}"
+            >{{ buildingZ.building_name }}</ion-select-option
+          >
+        </ion-select>
+        <div *ngIf="nameBuilding.invalid && nameBuilding.touched">
+          <small class="isError" *ngIf="nameBuilding.errors"
+            >Building is required</small
+          >
+        </div>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Product</ion-label>
+        <ion-select
+          name="product"
+          #nameProduct="ngModel"
+          [(ngModel)]="product"
+          class="custom ion-padding"
+          interface="popover"
+          placeholder="Select Product"
+          required
+        >
+          <ion-select-option
+            *ngFor="let productZ of products"
+            value="{{ productZ.id }}"
+            >{{ productZ.product_name }}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked">Product Quantity</ion-label>
+        <ion-input
+          name="product_quantity"
+          #nameProductQuantity="ngModel"
+          (ionChange)="onProductQuantityChange($event)"
+          [(ngModel)]="product_quantity"
+          type="number"
+          class="custom ion-padding"
+          placeholder="Select Product Quantity"
+          required
+        >
+          <!-- <span class="mobilePrefix">+63 &nbsp;</span> -->
+        </ion-input>
+        <div *ngIf="nameProductQuantity.invalid && nameProductQuantity.touched">
+          <small class="isError" style="color: red;"*ngIf="nameProductQuantity.errors"
+            >Product quantity is required and is to be a positive integer</small
+          >
+        </div>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Batch Date</ion-label>
+        <ion-input
+        type="text"
+        value="{{ selectedDate | date: 'yyyy-MM-dd'}}"
+        class="custom ion-padding"
+        disabled="true"
+      ></ion-input>
+      </ion-item>
+      
+    
+    </ion-list>
+    <ion-button [disabled]="batchForm.form.invalid" type="submit" expand="block"
+      >Confirmation</ion-button
+    >
+  </form>
+</ion-content>

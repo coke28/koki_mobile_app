@@ -1,0 +1,120 @@
+<ion-content>
+  <ion-grid class="no-padding">
+    <ion-row class="login-head topmostBtn">
+      <ion-col col-12>
+        <!-- <button navPop icon-only class="backbtnbkg">
+          <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        </button> -->
+      </ion-col>
+    </ion-row>
+    <ion-row class="login-head">
+      <ion-col col-12 align="center">
+        <img
+          class="login-header-img"
+          src="assets/img/terra_huevos.jpg"
+          style="width: 200px; height: 90px"
+        />
+      </ion-col>
+    </ion-row>
+    <ion-row class="login-head">
+      <ion-col class="title-column">
+        <div class="toBottom">
+          <span class="login-title">Batch Details.</span>
+          <br />
+          <span class="login-subtitle">Details of Scanned QR Code</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label position="stacked">Batch ID</ion-label>
+      <ion-input
+        name="batch_id"
+        [(ngModel)]="batch_id"
+        type="text"
+        class="custom ion-padding"
+        readonly
+        required
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Harvest Date</ion-label>
+      <ion-input
+        name="harvest_date"
+        [(ngModel)]="harvest_date"
+        type="text"
+        class="custom ion-padding"
+        readonly
+        required
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Harvested from Building</ion-label>
+      <ion-input
+        name="building"
+        [(ngModel)]="building"
+        type="text"
+        class="custom ion-padding"
+        readonly
+        required
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Product Harvested</ion-label>
+      <ion-input
+        name="product"
+        [(ngModel)]="product"
+        type="text"
+        class="custom ion-padding"
+        readonly
+        required
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Current Stock</ion-label>
+      <ion-input
+        name="current_stock"
+        [(ngModel)]="current_stock"
+        type="text"
+        class="custom ion-padding"
+        readonly
+        required
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Total Stock</ion-label>
+      <ion-input
+        name="total_stock"
+        [(ngModel)]="total_stock"
+        type="text"
+        class="custom ion-padding"
+        readonly
+        required
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button
+            type="button"
+            class="loginBtn"
+            expand="block"
+            (click)="scan()"
+            >Scan!</ion-button
+          >
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>
